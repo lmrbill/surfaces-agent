@@ -20,6 +20,8 @@ from surfaces_agent.tools.md import run_md_simulation
 from surfaces_agent.tools.supercell import expand_structure_to_supercell
 from surfaces_agent.tools.vacancy import create_surface_vacancy
 from surfaces_agent.tools.neb import prepare_neb_pathway
+from surfaces_agent.tools.alloy import create_random_alloy
+from surfaces_agent.tools.interstitial import create_random_interstitials
 from surfaces_agent.agent.session import global_state as session
 
 def main():
@@ -68,7 +70,9 @@ def main():
         run_md_simulation,
         expand_structure_to_supercell,
         create_surface_vacancy,
-        prepare_neb_pathway
+        prepare_neb_pathway,
+        create_random_alloy,
+        create_random_interstitials
     ]
 
     system_instruction = """You are a computational surface scientist specializing in oxide surfaces and catalytic reactions.
